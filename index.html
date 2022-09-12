@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header id="smallScreen">
+        <nav><img src="img/icons/burger-menu.png" alt="more" id="burgerMenu"></nav>
+</header>
+
+<section id="nearByAsteroids">
+    <label for="inputDate">Enter a date</label>
+    <input type="date" id="startDate" name="inputDate" class="datum">
+    <button id="dateSubmitBtn">See nearby Asteroids!</button>
+
+    <section id="dataOutput">
+        <section>
+            <p id="elCount"></p>
+            <input type="number" placeholder="1">
+            <button>Show object</button>
+        </section>
+
+        <!--Deze data laten zien als er geklikt word moet ff uitzoeken hoe of wat next knop en data knop ofzo-->
+        <section id="objectData">
+            <p id="objectName"></p>
+            <p id="orbit"></p>
+            <p id="earthDist"></p>
+            <p id="velocity"></p>
+            <p id="diameter"></p>
+            <p id="abMag"></p> 
+        </section>
+    </section>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>

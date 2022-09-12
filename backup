@@ -1,0 +1,25 @@
+//api key = dZvFSDlqyjb3S5prOv06EbmfM5splAc1vjL0hUIq
+
+document.querySelector('#dateSubmitBtn').addEventListener('click', showNearbyAsteroids);
+
+function showNearbyAsteroids(){
+const startDate = document.querySelector('#startDate').value;
+const endDate = document.querySelector('#endDate').value;
+
+console.log(`startdate: ${startDate} + enddate: ${endDate}`)
+
+const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=dZvFSDlqyjb3S5prOv06EbmfM5splAc1vjL0hUIq`; //hier de url 
+fetch(url)
+.then(res => res.json())
+.then(data => {
+    console.log(data);
+    console.log(data.near_earth_objects[0][0]);
+    console.log();
+    document.querySelector('#test').innerHTML = data.near_earth_objects[0].absolute_magnitude_h;
+})
+.catch(err => {
+    console.log(`err ${err}`)
+})
+
+}
+;

@@ -1,0 +1,50 @@
+/* ====================================Kleuren Pallette====================================
+Yellow Orange:                  #FFA630
+Black coral:                    #465362
+Sheen Green:                    #A2D729
+Morning Blue:                   #82A3A1
+Silver Sand:                    #BBC8CA
+
+
+*/
+
+/* ====================================Geimporteerde Fonts====================================*/
+
+
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background:#BBC8CA;
+}
+#smallScreen nav{
+    height: 50px;
+}
+#smallScreen nav,#smallScreen img{
+    background-color: #82A3A1;
+}
+#burgerMenu{
+    height: auto;
+    margin-left:10px;
+    margin-top: 6px;
+}
+#burgerMenu:hover{
+    width:40px;
+}
+.datum{
+    
+}
+input[type="date"]{
+    background: lavender;
+    font-family: ;
+    border-radius: 5px;
+}
+#elementCount{
+    margin-top:20px;
+    border: 2px inset #A2D729;
+}
+#objectData{
+    margin-top: 20px;
+    border: 2px solid salmon;
+}
