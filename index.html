@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--GEIMPORTEERDE GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <!--GEIMPORTEERDE GOOGLE FONTS-->
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
 </head>
@@ -12,28 +17,27 @@
         <nav><img src="img/icons/burger-menu.png" alt="more" id="burgerMenu"></nav>
 </header>
 
-<section id="nearByAsteroids">
-    <label for="inputDate">Enter a date</label>
-    <input type="date" id="startDate" name="inputDate" class="datum">
-    <button id="dateBtn">See nearby Asteroids!</button>
-
-    <section id="dataOutput">
-        <section>
+</section>
+<section id="contentRapper">
+            <section id="leftBox">
+            <label for="inputDate">Choose a date</label> 
+            <input type="date" id="startDate" name="inputDate" class="datum">
+            <button id="dateBtn" class="knoppie">See Asteroids</button>
             <p id="elCount"></p>
-            <input type="number" placeholder="1" min="" max="">
-            <button>Show object</button>
+            <input id="numAst" type="number" placeholder="1" min="0" max="">
+            <button id="showOtherAsteroid" class="knoppie">Show</button>
         </section>
 
         <!--Deze data laten zien als er geklikt word moet ff uitzoeken hoe of wat next knop en data knop ofzo-->
-        <section id="objectData">
-            <p id="objectName"></p>
-            <p id="orbit"></p>
-            <p id="earthDist"></p>
-            <p id="velocity"></p>
-            <p id="diameter"></p>
-            <p id="abMag"></p> 
+        <section id="rightBox">
+            <p class="rightData" id="objectName"></p>
+            <p class="rightData" id="orbit"></p>
+            <p class="rightData" id="earthDist"></p>
+            <p class="rightData" id="velocity"></p>
+            <p class="rightData" id="diameter"></p>
+            <p class="rightData" id="abMag"></p> 
         </section>
-    </section>
+    
 </section>
 
 <script src="main.js"></script>

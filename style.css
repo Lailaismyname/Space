@@ -4,25 +4,34 @@ Black coral:                    #465362
 Sheen Green:                    #A2D729
 Morning Blue:                   #82A3A1
 Silver Sand:                    #BBC8CA
-
-
 */
 
-/* ====================================Geimporteerde Fonts====================================*/
+/* ====================================Geimporteerde Fonts====================================
+font-family: 'Space Grotesk', sans-serif;
+font-family: 'Space Mono', monospace;
+font-family: 'Yusei Magic', sans-serif;
+*/
 
-
+/*---------------------------------------LAYOUT -----------------------------------------------*/
+/*---------------------------------------OPMAAK------------------------------------------------*/
 *{
+    font-family: 'Space Mono', monospace;
     margin:0px;
     padding:0px;
 }
 body{
-    background:#BBC8CA;
+    /*
+    background-image: url('/img/earth-gce6f3ee31_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    */
+    background: #FFA630;
 }
 #smallScreen nav{
     height: 50px;
 }
 #smallScreen nav,#smallScreen img{
-    background-color: #82A3A1;
+    background-color: #465362;
 }
 #burgerMenu{
     height: auto;
@@ -35,16 +44,57 @@ body{
 .datum{
     
 }
+.knoppie{
+    background:#A2D729;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    color:#465362;
+}
+.knoppie:hover{
+    background: #84af21;
+    color:black;
+}
+#dateBtn{
+    height:50px;
+}
 input[type="date"]{
-    background: lavender;
-    font-family: ;
+    background: #BBC8CA;
     border-radius: 5px;
+    width: 110px;
 }
-#elementCount{
+input[type="number"]{
+    width:50px;
+}
+#elCount{
+    height: 160px;
     margin-top:20px;
-    border: 2px inset #A2D729;
 }
-#objectData{
-    margin-top: 20px;
-    border: 2px solid salmon;
+#contentRapper{
+    width: 100%;
+    margin: 20% 0;
+    height: 55vh;
+    border-top: 4px solid #84af21;
+    border-bottom: 4px solid #84af21;
+}
+#leftBox{
+    background:#465362;
+    float: left;
+    height: 100%;
+    width: 30%;
+    line-height: 30px;
+    text-align: center;
+    color: #A2D729;
+}
+#rightBox{
+    float: left;
+    width: 69.9999%;
+    height: 100%;
+    background:#BBC8CA;
+    color:#465362;
+    text-align: center;
+}
+.rightData{
+    padding: 20px 20px;
 }
