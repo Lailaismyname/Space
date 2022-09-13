@@ -45,3 +45,5 @@ fetch(url)
 //Oke selectere op datum werkt, nu nog toevoegen dat je door alle objecten heen kan klikken.
 //next en previous button toevoegen, plus selecteren op getal. 
 //en dan opmaak even mooi maken
+
+//ow en picture of the day toevoegen! met zoeken op datum en omschrijving... dudeeee accessing data van nasa hoe cool is dat!
