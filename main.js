@@ -1,17 +1,25 @@
 //api key = dZvFSDlqyjb3S5prOv06EbmfM5splAc1vjL0hUIq
-const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-07&api_key=dZvFSDlqyjb3S5prOv06EbmfM5splAc1vjL0hUIq`; //hier de url 
+
+document.querySelector('#dateBtn').addEventListener('click', getFetch);
+
+
+
+function getFetch(){
+    let datum = document.querySelector('#startDate').value; // deze werkt niet waarom?
+    //console.log(datumpie);
+    //let datum = '2015-09-07';
+    const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${datum}&end_date=${datum}&api_key=dZvFSDlqyjb3S5prOv06EbmfM5splAc1vjL0hUIq`; //hier de url 
 fetch(url)
 .then(res => res.json())
 .then(data => {
-    let datum = '2015-09-07';
-    let elementCount = data.element_count;
-    let aboluteMagnitude = data['near_earth_objects'][datum][0]['absolute_magnitude_h'];
-    let earthDistKil = data['near_earth_objects'][datum][0]['close_approach_data'][0]['miss_distance']['kilometers'];
-    let celBody = data['near_earth_objects'][datum][0]['close_approach_data'][0]['orbiting_body'];
-    let velocityKmPerHour = data['near_earth_objects'][datum][0]['close_approach_data'][0]['relative_velocity']['kilometers_per_hour'];
-    let diameterKilMin = data['near_earth_objects'][datum][0]['estimated_diameter']['kilometers']['estimated_diameter_min'];
-    let diameterKilMax = data['near_earth_objects'][datum][0]['estimated_diameter']['kilometers']['estimated_diameter_max'];
-    let objectName = data['near_earth_objects'][datum][0]['name'];
+    const elementCount = data.element_count;
+    const aboluteMagnitude = data['near_earth_objects'][datum][0]['absolute_magnitude_h'];
+    const earthDistKil = data['near_earth_objects'][datum][0]['close_approach_data'][0]['miss_distance']['kilometers'];
+    const celBody = data['near_earth_objects'][datum][0]['close_approach_data'][0]['orbiting_body'];
+    const velocityKmPerHour = data['near_earth_objects'][datum][0]['close_approach_data'][0]['relative_velocity']['kilometers_per_hour'];
+    const diameterKilMin = data['near_earth_objects'][datum][0]['estimated_diameter']['kilometers']['estimated_diameter_min'];
+    const diameterKilMax = data['near_earth_objects'][datum][0]['estimated_diameter']['kilometers']['estimated_diameter_max'];
+    const objectName = data['near_earth_objects'][datum][0]['name'];
     console.log(data);
     //console.log(data['near_earth_objects']['2015-09-07'][0]['absolute_magnitude_h']);
     //console.log(data.near_earth_objects.2015-09-07);
@@ -32,6 +40,8 @@ fetch(url)
 .catch(err => {
     console.log(`err ${err}`)
 })
+}
 
-//als je m wilt gebruiken op de click dan moet ie in een functie staan. En die functie aanroepen in eventlistener parameter. 
-//gewoon aanroepen ipv. hele code erin scrhijven.
+//Oke selectere op datum werkt, nu nog toevoegen dat je door alle objecten heen kan klikken.
+//next en previous button toevoegen, plus selecteren op getal. 
+//en dan opmaak even mooi maken
