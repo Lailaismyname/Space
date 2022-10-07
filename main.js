@@ -1,5 +1,3 @@
-//api key = dZvFSDlqyjb3S5prOv06EbmfM5splAc1vjL0hUIq
-
 let asteroidIndex = 0;
 
 document.querySelector('#dateBtn').addEventListener('click', getFetch);
@@ -45,3 +43,4 @@ let showButton = document.querySelector('#showOtherAsteroid');
                 console.log(asteroidIndex);
             })
 //picture of the day toevoegen met ander api. 
+// en mooier maken want dit is lelijk...
